@@ -1,0 +1,28 @@
+{
+  "name": "fe-catch",
+  "version": "1.0.0",
+  "description": "前端异常监控",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "rollup --config ./build/rollup.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaotangdou/fe-catch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaotangdou/fe-catch/issues"
+  },
+  "homepage": "https://github.com/xiaotangdou/fe-catch#readme",
+  "dependencies": {
+    "rollup": "^2.35.1"
+  }
+}
