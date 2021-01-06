@@ -1,5 +1,5 @@
 {
-  "name": "fe-catch",
+  "name": "fe-error-monitor",
   "version": "1.0.0",
   "description": "前端异常监控",
   "main": "index.js",
@@ -13,16 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiaotangdou/fe-catch.git"
+    "url": "git+https://github.com/xiaotangdou/fe-error-monitor.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xiaotangdou/fe-catch/issues"
+    "url": "https://github.com/xiaotangdou/fe-error-monitor/issues"
   },
-  "homepage": "https://github.com/xiaotangdou/fe-catch#readme",
-  "dependencies": {
-    "rollup": "^2.35.1"
+  "homepage": "https://github.com/xiaotangdou/fe-error-monitor#readme",
+  "devDependencies": {
+    "rollup": "^2.35.1",
+    "@rollup/plugin-commonjs": "^17.0.0"
   }
 }

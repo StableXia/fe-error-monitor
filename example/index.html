@@ -7,20 +7,19 @@
     <script src="../lib/bundle.js"></script>
 </head>
 <body>
-    <!-- <img src="./xxxxx.png"> -->
+    <img src="./xxxxx.png">
 </body>
 <script>
-    // setTimeout(() => {
-    //     error;
-    // });
-
+    setTimeout(() => {
+        error;
+    });
   
     new Promise((resolve, reject) => {
         error()
     })
-    // 增加异常捕获
-    // .catch((err) => {
-    //     console.log('promise catch:',err)
-    // });
+    .catch((err) => {
+        console.log('promise catch:',err)
+        throw err
+    });
 </script>
 </html>

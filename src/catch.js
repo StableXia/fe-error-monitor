@@ -1,35 +1,10 @@
-window.onerror = (message, source, lineno, colno, error) => {
-  console.log("onerror:", message, source, lineno, colno, error);
-  return true;
-};
+import { monitorMixin, initGlobalApi } from "./core";
 
-window.addEventListener(
-  "error",
-  (event) => {
-    console.log(event);
+export function Monitor() {
+  if (!(this instanceof Monitor)) {
+    throw new Error("Monitor 不能作为函数调用，应该使用 new 关键字");
+  }
+}
 
-    // 过滤js error
-    let target = event.target || event.srcElement;
-    let isElementTarget =
-      target instanceof HTMLScriptElement ||
-      target instanceof HTMLLinkElement ||
-      target instanceof HTMLImageElement;
-    if (!isElementTarget) {
-      return false;
-    }
-
-    // 上报资源地址
-    let url = target.src || target.href;
-    console.log(url);
-  },
-  true // 利用捕获方式
-);
-
-window.addEventListener("unhandledrejection", (e) => {
-  console.log("unhandledrejection", e);
-  throw e.reason;
-});
-
-export function Monitor() {}
-
-Monitor.
+initGlobalApi(Monitor);
+monitorMixin(Monitor);

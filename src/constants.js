@@ -1,9 +1,10 @@
 /**
  * @description 错误来源
  */
-const ERROR_SOURCE = {
-  ERROR: "error",
-  ON_ERROR: "onError",
-  PROMISE: "promise",
-  UNKNOWN: "unknown",
+export const ERROR_SOURCE = {
+  GENERAL_ERROR: "error",
+  RESOURCE_ERROR: "onError",
+  PROMISED_ERROR: "promise",
+  CUSTOM_ERROR: "custom",
+  UNKNOWN_ERROR: "unknow",
 };
