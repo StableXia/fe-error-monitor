@@ -1,4 +1,4 @@
-import { Monitor } from "./catch";
+import { Monitor } from './catch';
 
 const monitor = new Monitor();
 

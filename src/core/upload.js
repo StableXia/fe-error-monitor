@@ -1,13 +1,15 @@
-import { normalizeMessage } from "./errorMessage";
+import { normalizeMessage } from './errorMessage';
 
 export function uploadMessage(errorInfo) {
   const { type, sourceError } = errorInfo;
 
   const message = normalizeMessage(type, sourceError);
 
-  console.log(message);
+  upload(message);
 }
 
 function upload(info) {
-  new Image().src = `${host}?info=${str}`;
+  const host = 'http://localhost:7001/monitor/error';
+
+  new Image().src = `${host}?info=${JSON.stringify(info)}`;
 }
